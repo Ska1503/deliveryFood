@@ -35,7 +35,7 @@ logInForm.addEventListener('submit', (e) => {
 
   localStorage.setItem('user', JSON.stringify(user))
 
-  if (inputLogin.value.length === 0 && inputPassword.value.length === 0) {
+  if (inputLogin.value.length === 0 || inputPassword.value.length === 0) {
     errorLogIn()
   }
 })
@@ -69,4 +69,5 @@ function errorLogIn() {
   buttonAuth.style.display = 'flex'
   modalAuth.style.display = 'flex'
   buttonOut.style.display = 'none'
+  userName.style.display = 'none'
 }
